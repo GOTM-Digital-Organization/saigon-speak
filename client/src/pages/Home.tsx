@@ -187,10 +187,10 @@ export default function Home() {
                 <div className="flex flex-col gap-2 text-sm"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: "var(--foreground)" }}>
                   {[
-                    ["Vietnamese", "Xin chào — with full tone marks"],
-                    ["Pronunciation", "/sin chow/ — how you'd say it"],
-                    ["Example", "Xin chào anh. → Hello, sir."],
-                    ["Notes", "Universal greeting for strangers"],
+                    ["Vietnamese", "Chào anh — with full tone marks"],
+                    ["Pronunciation", "/chow ahn/ — how you'd say it"],
+                    ["Example", "Chào anh, khỏe hông? → Hey, how are you?"],
+                    ["Notes", "How locals actually greet an older man"],
                   ].map(([label, desc]) => (
                     <div key={label} className="flex items-start gap-2">
                       <span className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: "var(--terracotta)" }} />
@@ -214,11 +214,11 @@ export default function Home() {
                   </div>
                   <div className="text-3xl font-semibold"
                     style={{ fontFamily: "'Playfair Display', serif", color: "var(--vietnamese)" }}>
-                    Xin chào
+                    Chào anh
                   </div>
                   <div className="text-sm px-3 py-1 rounded-lg self-start"
                     style={{ fontFamily: "'DM Mono', monospace", color: "var(--terracotta)", background: "oklch(0.52 0.14 40 / 0.08)" }}>
-                    /sin chow/
+                    /chow ahn/
                   </div>
                   <div style={{ height: "1px", background: "var(--border)" }} />
                   <div>
@@ -226,16 +226,16 @@ export default function Home() {
                       style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>Example</div>
                     <div className="text-sm italic"
                       style={{ fontFamily: "'Playfair Display', serif", color: "var(--vietnamese-light)" }}>
-                      Xin chào anh.
+                      Chào anh, khỏe hông?
                     </div>
                     <div className="text-xs mt-0.5"
                       style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-                      Hello, sir.
+                      Hey, how are you?
                     </div>
                   </div>
                   <div className="px-3 py-2 rounded-lg text-xs"
                     style={{ background: "oklch(0.78 0.14 80 / 0.12)", color: "oklch(0.38 0.08 70)", borderLeft: "3px solid var(--gold)", fontFamily: "'DM Sans', sans-serif" }}>
-                    Universal greeting for strangers
+                    How locals actually greet an older man — not the textbook "Xin chào"
                   </div>
                 </div>
               </div>
