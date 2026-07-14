@@ -297,8 +297,38 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Support section */}
+        <div className="border-t py-10 text-center"
+          style={{ borderColor: "var(--border)", background: "var(--cream)" }}>
+          <div className="max-w-md mx-auto px-6 flex flex-col items-center gap-4">
+            <p className="text-lg font-semibold"
+              style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
+              Helped you survive Saigon?
+            </p>
+            <p className="text-sm leading-relaxed"
+              style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
+              No subscriptions. No ads. Just real Southern Vietnamese. If it's been useful on your Vietnam journey, a coffee helps keep it running and growing.
+            </p>
+            <a
+              href="https://buy.stripe.com/5kQ3cv58l9Tpbh15zJ5ZC02"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all active:scale-95 hover:opacity-90"
+              style={{
+                background: "var(--terracotta)",
+                color: "white",
+                fontFamily: "'DM Sans', sans-serif",
+                boxShadow: "0 4px 16px oklch(0.52 0.14 40 / 0.35)",
+                textDecoration: "none"
+              }}
+            >
+              ☕ Buy me a cà phê sữa đá
+            </a>
+          </div>
+        </div>
+
         {/* Footer */}
-        <footer className="border-t py-6 text-center"
+        <footer className="border-t py-5 text-center"
           style={{ borderColor: "var(--border)", background: "var(--cream)" }}>
           <p className="text-sm" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
             Saigon Speak — Everyday Southern Vietnamese for real life in Hồ Chí Minh City
