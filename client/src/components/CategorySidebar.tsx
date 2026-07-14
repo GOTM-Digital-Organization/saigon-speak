@@ -1,6 +1,6 @@
 /**
- * CategorySidebar — Saigon Speak
- * Design: Warm Colonial Linen
+ * CategorySidebar — Bangkok Speak
+ * Design: Temple Gold & Teal
  * Left sidebar for desktop, bottom sheet trigger for mobile
  */
 
@@ -35,8 +35,8 @@ export default function CategorySidebar({ activeCategory, onSelect, progress }: 
               onClick={() => onSelect(cat)}
               className="w-full text-left rounded-xl px-3 py-2.5 mb-0.5 transition-all duration-150 group"
               style={{
-                background: isActive ? "oklch(0.52 0.14 40 / 0.10)" : "transparent",
-                borderLeft: isActive ? "3px solid var(--terracotta)" : "3px solid transparent",
+                background: isActive ? "oklch(0.60 0.14 65 / 0.10)" : "transparent",
+                borderLeft: isActive ? "3px solid var(--primary)" : "3px solid transparent",
               }}
             >
               <div className="flex items-center gap-2.5">
@@ -49,7 +49,7 @@ export default function CategorySidebar({ activeCategory, onSelect, progress }: 
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontWeight: isActive ? 600 : 400,
-                      color: isActive ? "var(--terracotta)" : "var(--foreground)",
+                      color: isActive ? "var(--primary)" : "var(--foreground)",
                     }}
                   >
                     {cat}
@@ -60,7 +60,7 @@ export default function CategorySidebar({ activeCategory, onSelect, progress }: 
                       className="h-full rounded-full transition-all duration-500"
                       style={{
                         width: `${pct}%`,
-                        background: pct === 100 ? "var(--gold)" : "var(--terracotta)",
+                        background: pct === 100 ? "oklch(0.50 0.11 195)" : "var(--primary)",
                         opacity: pct === 0 ? 0 : 1
                       }}
                     />
