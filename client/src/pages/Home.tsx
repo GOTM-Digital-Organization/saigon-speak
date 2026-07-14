@@ -1,9 +1,8 @@
 /**
- * Home page — Bangkok Speak
- * Design: Temple Gold & Teal aesthetic
+ * Home page — Saigon Speak
+ * Design: Warm Colonial Linen aesthetic
  * Layout: Left sidebar (categories) + Right main area (flashcard study)
  * Mobile: Full-screen card with bottom category picker
- * Key difference from Saigon Speak: Pronunciation is the HERO field (Thai script is secondary)
  */
 
 import { useState, useCallback, useEffect } from "react";
@@ -84,18 +83,18 @@ export default function Home() {
         {/* Header */}
         <header
           className="flex items-center justify-between px-6 py-4 border-b"
-          style={{ background: "oklch(1 0 0)", borderColor: "var(--border)" }}
+          style={{ background: "var(--cream)", borderColor: "var(--border)" }}
         >
           <div className="flex items-center gap-3">
-            <img src="/manus-storage/bangkok-logo_c617d69e.png" alt="Bangkok Speak" className="w-9 h-9 object-contain" />
+            <img src="/manus-storage/saigon-logo_49b4357c.png" alt="Saigon Speak" className="w-9 h-9 object-contain" />
             <div>
               <h1 className="text-xl font-bold leading-none"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--foreground)", fontWeight: 700 }}>
-                Bangkok Speak
+                style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
+                Saigon Speak
               </h1>
               <p className="text-xs leading-none mt-0.5"
                 style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-                Real Bangkok Thai Flashcards
+                Southern Vietnamese Flashcards
               </p>
             </div>
           </div>
@@ -106,39 +105,39 @@ export default function Home() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url('/manus-storage/bangkok-hero_008dedbc.jpg')",
+              backgroundImage: "url('/manus-storage/saigon-hero_7e351c38.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           />
-          <div className="absolute inset-0" style={{ background: "oklch(0.18 0.04 55 / 0.55)" }} />
+          <div className="absolute inset-0" style={{ background: "oklch(0.22 0.02 60 / 0.45)" }} />
           <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-20 md:py-28">
             <div className="inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-widest uppercase mb-5"
               style={{
-                background: "oklch(0.72 0.14 72 / 0.25)",
-                color: "oklch(0.95 0.08 80)",
-                border: "1px solid oklch(0.72 0.14 72 / 0.45)",
+                background: "oklch(0.78 0.14 80 / 0.25)",
+                color: "oklch(0.95 0.06 80)",
+                border: "1px solid oklch(0.78 0.14 80 / 0.4)",
                 fontFamily: "'DM Sans', sans-serif",
                 letterSpacing: "0.14em"
               }}>
-              Bangkok Street Thai
+              Ho Chi Minh City Dialect
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight max-w-2xl"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 700, textShadow: "0 2px 16px oklch(0.1 0 0 / 0.5)" }}>
-              Learn Thai the way Bangkok actually speaks it.
+              style={{ fontFamily: "'Playfair Display', serif", textShadow: "0 2px 12px oklch(0.1 0 0 / 0.4)" }}>
+              Learn Vietnamese the way Saigon actually speaks it.
             </h2>
             <p className="text-base md:text-lg mb-8 max-w-xl"
-              style={{ color: "oklch(0.92 0.03 80)", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.7 }}>
-              Not textbook Thai. Real street language — the phrases you'll actually hear at street food stalls, in tuk-tuks, and in daily Bangkok life.
+              style={{ color: "oklch(0.90 0.02 75)", fontFamily: "'DM Sans', sans-serif", lineHeight: 1.7 }}>
+              Not textbook phrases. Real Southern dialect — the words you'll actually hear in cafés, on Grab bikes, and in daily life.
             </p>
             <button
               onClick={() => handleCategorySelect(categories[0])}
               className="flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold transition-all active:scale-95 hover:opacity-90"
               style={{
-                background: "oklch(0.60 0.14 65)",
+                background: "var(--terracotta)",
                 color: "white",
                 fontFamily: "'DM Sans', sans-serif",
-                boxShadow: "0 4px 20px oklch(0.60 0.14 65 / 0.5)"
+                boxShadow: "0 4px 20px oklch(0.52 0.14 40 / 0.5)"
               }}
             >
               <BookOpen size={18} />
@@ -148,16 +147,16 @@ export default function Home() {
         </div>
 
         {/* Stats bar */}
-        <div className="border-b" style={{ background: "oklch(1 0 0)", borderColor: "var(--border)" }}>
+        <div className="border-b" style={{ background: "var(--cream)", borderColor: "var(--border)" }}>
           <div className="max-w-4xl mx-auto px-6 py-4 flex flex-wrap gap-6 justify-center md:justify-start">
             {[
               { label: "Categories", value: "20" },
-              { label: "Flashcards", value: "495" },
-              { label: "Real Bangkok Thai", value: "100%" },
+              { label: "Flashcards", value: "499" },
+              { label: "Southern Dialect", value: "100%" },
             ].map(({ label, value }) => (
               <div key={label} className="flex items-baseline gap-2">
                 <span className="text-2xl font-bold"
-                  style={{ fontFamily: "'Cormorant Garamond', serif", color: "oklch(0.60 0.14 65)", fontWeight: 700 }}>
+                  style={{ fontFamily: "'Playfair Display', serif", color: "var(--terracotta)" }}>
                   {value}
                 </span>
                 <span className="text-sm" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
@@ -169,32 +168,32 @@ export default function Home() {
         </div>
 
         {/* Sample flashcard preview */}
-        <div style={{ background: "oklch(0.60 0.14 65 / 0.05)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
+        <div style={{ background: "oklch(0.52 0.14 40 / 0.05)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
           <div className="max-w-4xl mx-auto px-6 py-10">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1">
                 <div className="text-xs font-medium tracking-widest uppercase mb-3"
-                  style={{ color: "oklch(0.60 0.14 65)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.14em" }}>
+                  style={{ color: "var(--terracotta)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.14em" }}>
                   What every card looks like
                 </div>
                 <h3 className="text-2xl font-bold mb-3"
-                  style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--foreground)", fontWeight: 700 }}>
-                  Real Bangkok Thai,<br />not textbook language.
+                  style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
+                  Real Southern Vietnamese,<br />not textbook language.
                 </h3>
                 <p className="text-sm leading-relaxed mb-4"
                   style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-                  Every card shows the Thai script, an English-friendly pronunciation guide (the most important part), a natural example sentence, and a note on when locals actually use it.
+                  Every card shows you the Vietnamese script with tone marks, a phonetic pronunciation guide written for English speakers, a natural example sentence, and a note on when locals actually use it.
                 </p>
                 <div className="flex flex-col gap-2 text-sm"
                   style={{ fontFamily: "'DM Sans', sans-serif", color: "var(--foreground)" }}>
                   {[
-                    ["Thai Script", "หวัดดี — so you recognize it written"],
-                    ["Pronunciation", "wàt-dee — how you actually say it"],
-                    ["Example", "wàt-dee jâa → Hey! (casual greeting)"],
-                    ["Notes", "Casual — use with friends, not elders"],
+                    ["Vietnamese", "Chào anh — with full tone marks"],
+                    ["Pronunciation", "/chow ahn/ — how you'd say it"],
+                    ["Example", "Chào anh, khỏe hông? → Hey, how are you?"],
+                    ["Notes", "How locals actually greet an older man"],
                   ].map(([label, desc]) => (
                     <div key={label} className="flex items-start gap-2">
-                      <span className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: "oklch(0.60 0.14 65)" }} />
+                      <span className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{ background: "var(--terracotta)" }} />
                       <span><strong>{label}:</strong> {desc}</span>
                     </div>
                   ))}
@@ -203,61 +202,40 @@ export default function Home() {
 
               {/* Sample card */}
               <div className="w-full md:w-72 flex-shrink-0">
-                <div className="rounded-2xl p-6 flex flex-col gap-3 relative overflow-hidden"
+                <div className="rounded-2xl p-6 flex flex-col gap-3"
                   style={{
-                    background: "oklch(1 0 0)",
+                    background: "var(--cream)",
                     border: "1px solid var(--border)",
-                    boxShadow: "0 8px 32px oklch(0.20 0.02 55 / 0.10)"
+                    boxShadow: "0 8px 32px oklch(0.22 0.02 60 / 0.12)"
                   }}>
-                  {/* Gold top line */}
-                  <div style={{
-                    position: "absolute", top: 0, left: "10%", right: "10%", height: "3px",
-                    borderRadius: "0 0 4px 4px",
-                    background: "linear-gradient(90deg, oklch(0.72 0.14 72), oklch(0.60 0.14 65 / 0.3))"
-                  }} />
                   <div className="text-xs font-medium tracking-widest uppercase"
-                    style={{ color: "oklch(0.60 0.14 65)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.14em" }}>
-                    Bangkok Thai
+                    style={{ color: "var(--terracotta-light)", fontFamily: "'DM Sans', sans-serif", letterSpacing: "0.14em" }}>
+                    Southern Vietnamese
                   </div>
-                  {/* Thai script */}
-                  <div style={{
-                    fontFamily: "'Noto Sans Thai', 'Cormorant Garamond', serif",
-                    fontSize: "1.6rem", fontWeight: 600,
-                    color: "oklch(0.25 0.09 250)", lineHeight: 1.5
-                  }}>
-                    หวัดดี
+                  <div className="text-3xl font-semibold"
+                    style={{ fontFamily: "'Playfair Display', serif", color: "var(--vietnamese)" }}>
+                    Chào anh
                   </div>
-                  {/* Pronunciation — hero */}
-                  <div className="px-4 py-1.5 rounded-full self-start"
-                    style={{
-                      fontFamily: "'DM Mono', monospace", fontSize: "1rem", fontWeight: 500,
-                      color: "oklch(0.28 0.09 195)",
-                      background: "oklch(0.86 0.07 195 / 0.25)",
-                      border: "1px solid oklch(0.50 0.11 195 / 0.3)"
-                    }}>
-                    wàt-dee
+                  <div className="text-sm px-3 py-1 rounded-lg self-start"
+                    style={{ fontFamily: "'DM Mono', monospace", color: "var(--terracotta)", background: "oklch(0.52 0.14 40 / 0.08)" }}>
+                    /chow ahn/
                   </div>
                   <div style={{ height: "1px", background: "var(--border)" }} />
                   <div>
                     <div className="text-xs uppercase tracking-wide mb-0.5"
                       style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>Example</div>
-                    <div className="text-sm"
-                      style={{ fontFamily: "'DM Mono', monospace", color: "oklch(0.38 0.07 250)", lineHeight: 1.6 }}>
-                      wàt-dee jâa · jer-gan têe ráan ná
+                    <div className="text-sm italic"
+                      style={{ fontFamily: "'Playfair Display', serif", color: "var(--vietnamese-light)" }}>
+                      Chào anh, khỏe hông?
                     </div>
-                    <div className="text-xs mt-0.5 italic"
+                    <div className="text-xs mt-0.5"
                       style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-                      Hey! See you at the shop.
+                      Hey, how are you?
                     </div>
                   </div>
                   <div className="px-3 py-2 rounded-lg text-xs"
-                    style={{
-                      background: "oklch(0.72 0.14 72 / 0.10)",
-                      color: "oklch(0.40 0.08 65)",
-                      borderLeft: "3px solid oklch(0.72 0.14 72)",
-                      fontFamily: "'DM Sans', sans-serif"
-                    }}>
-                    Very casual — use with friends. Add jâa for warmth. Avoid with elders (use sà-wàt-dee krap/kâ).
+                    style={{ background: "oklch(0.78 0.14 80 / 0.12)", color: "oklch(0.38 0.08 70)", borderLeft: "3px solid var(--gold)", fontFamily: "'DM Sans', sans-serif" }}>
+                    How locals actually greet an older man — not the textbook "Xin chào"
                   </div>
                 </div>
               </div>
@@ -268,7 +246,7 @@ export default function Home() {
         {/* Category grid */}
         <div className="flex-1 max-w-4xl mx-auto w-full px-6 py-10">
           <h3 className="text-xl font-bold mb-6"
-            style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--foreground)", fontWeight: 700 }}>
+            style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
             Choose a Category
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
@@ -282,15 +260,16 @@ export default function Home() {
                   onClick={() => handleCategorySelect(cat)}
                   className="flex flex-col items-start p-4 rounded-xl text-left transition-all hover:shadow-md active:scale-95 group"
                   style={{
-                    background: "oklch(1 0 0)",
+                    background: "var(--cream)",
                     border: "1px solid var(--border)",
-                    boxShadow: "0 2px 8px oklch(0.20 0.02 55 / 0.06)"
+                    boxShadow: "0 2px 8px oklch(0.22 0.02 60 / 0.06)"
                   }}
                 >
+                  {/* Terracotta category number badge instead of emoji */}
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-2 text-sm font-bold"
                     style={{
-                      background: pct === 100 ? "oklch(0.86 0.07 195 / 0.2)" : "oklch(0.60 0.14 65 / 0.12)",
-                      color: pct === 100 ? "oklch(0.50 0.11 195)" : "oklch(0.60 0.14 65)",
+                      background: pct === 100 ? "oklch(0.78 0.14 80 / 0.15)" : "oklch(0.52 0.14 40 / 0.10)",
+                      color: pct === 100 ? "oklch(0.55 0.12 75)" : "var(--terracotta)",
                       fontFamily: "'DM Mono', monospace"
                     }}>
                     {pct === 100 ? "✓" : (categories.indexOf(cat) + 1).toString().padStart(2, "0")}
@@ -304,7 +283,7 @@ export default function Home() {
                       className="h-full rounded-full transition-all"
                       style={{
                         width: `${pct}%`,
-                        background: pct === 100 ? "oklch(0.50 0.11 195)" : "oklch(0.60 0.14 65)",
+                        background: pct === 100 ? "var(--gold)" : "var(--terracotta)",
                         opacity: pct === 0 ? 0 : 1
                       }}
                     />
@@ -319,31 +298,11 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t py-10 text-center"
-          style={{ borderColor: "var(--border)", background: "oklch(0.99 0.002 65)" }}>
-          <div className="max-w-lg mx-auto px-6 flex flex-col items-center gap-4">
-            <p className="text-base" style={{ color: "var(--foreground)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>
-              Bangkok Speak is free. If it helped you speak like a local, not a tourist — buy me a coffee. Every one keeps the app going. ☕
-            </p>
-            <a
-              href="https://buy.stripe.com/5kQ3cv58l9Tpbh15zJ5ZC02"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-150 hover:scale-105 active:scale-95"
-              style={{
-                background: "linear-gradient(135deg, oklch(0.72 0.14 72), oklch(0.60 0.14 65))",
-                color: "oklch(1 0 0)",
-                fontFamily: "'DM Sans', sans-serif",
-                boxShadow: "0 4px 14px oklch(0.60 0.14 65 / 0.35)",
-                textDecoration: "none",
-              }}
-            >
-              ☕ Buy me a coffee — $5
-            </a>
-            <p className="text-xs" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-              Bangkok Speak — Everyday Bangkok Thai for real life in Thailand
-            </p>
-          </div>
+        <footer className="border-t py-6 text-center"
+          style={{ borderColor: "var(--border)", background: "var(--cream)" }}>
+          <p className="text-sm" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
+            Saigon Speak — Everyday Southern Vietnamese for real life in Hồ Chí Minh City
+          </p>
         </footer>
       </div>
     );
@@ -356,9 +315,9 @@ export default function Home() {
       <header
         className="flex items-center justify-between px-4 md:px-6 py-3 border-b"
         style={{
-          background: "oklch(1 0 0)",
+          background: "var(--cream)",
           borderColor: "var(--border)",
-          boxShadow: "0 1px 8px oklch(0.20 0.02 55 / 0.06)"
+          boxShadow: "0 1px 8px oklch(0.22 0.02 60 / 0.06)"
         }}
       >
         <div className="flex items-center gap-3">
@@ -366,10 +325,10 @@ export default function Home() {
             onClick={() => setView("landing")}
             className="flex items-center gap-2 transition-opacity hover:opacity-70"
           >
-            <img src="/manus-storage/bangkok-logo_c617d69e.png" alt="Bangkok Speak" className="w-8 h-8 object-contain" />
+            <img src="/manus-storage/saigon-logo_49b4357c.png" alt="Saigon Speak" className="w-8 h-8 object-contain" />
             <span className="text-lg font-bold hidden sm:block"
-              style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--foreground)", fontWeight: 700 }}>
-              Bangkok Speak
+              style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
+              Saigon Speak
             </span>
           </button>
         </div>
@@ -395,10 +354,10 @@ export default function Home() {
 
           {/* Desktop: current category badge */}
           <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full"
-            style={{ background: "oklch(0.60 0.14 65 / 0.10)" }}>
+            style={{ background: "oklch(0.52 0.14 40 / 0.10)" }}>
             <span className="text-base">{categoryIcons[activeCategory] ?? "📚"}</span>
             <span className="text-sm font-medium"
-              style={{ fontFamily: "'DM Sans', sans-serif", color: "oklch(0.60 0.14 65)" }}>
+              style={{ fontFamily: "'DM Sans', sans-serif", color: "var(--terracotta)" }}>
               {activeCategory}
             </span>
           </div>
@@ -418,16 +377,16 @@ export default function Home() {
           {sidebarOpen && (
             <div
               className="fixed inset-0 md:hidden"
-              style={{ background: "oklch(0.20 0.02 55 / 0.4)", zIndex: -1 }}
+              style={{ background: "oklch(0.22 0.02 60 / 0.4)", zIndex: -1 }}
               onClick={() => setSidebarOpen(false)}
             />
           )}
           <div
             className="h-full overflow-hidden"
             style={{
-              background: "oklch(1 0 0)",
+              background: "var(--cream)",
               borderRight: "1px solid var(--border)",
-              boxShadow: "2px 0 16px oklch(0.20 0.02 55 / 0.06)"
+              boxShadow: "2px 0 16px oklch(0.22 0.02 60 / 0.06)"
             }}
           >
             <CategorySidebar
@@ -444,11 +403,11 @@ export default function Home() {
           <div className="w-full max-w-xl mb-6 text-center">
             <div className="text-3xl mb-2">{categoryIcons[activeCategory] ?? "📚"}</div>
             <h2 className="text-2xl font-bold mb-1"
-              style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--foreground)", fontWeight: 700 }}>
+              style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
               {activeCategory}
             </h2>
             <p className="text-sm" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-              {totalCards} cards · Tap a card to reveal the Thai
+              {totalCards} cards · Tap a card to reveal the Vietnamese
             </p>
           </div>
 
@@ -464,7 +423,7 @@ export default function Home() {
                 className="h-full rounded-full transition-all duration-500"
                 style={{
                   width: `${progressPct}%`,
-                  background: progressPct === 100 ? "oklch(0.50 0.11 195)" : "oklch(0.60 0.14 65)"
+                  background: progressPct === 100 ? "var(--gold)" : "var(--terracotta)"
                 }}
               />
             </div>
@@ -475,14 +434,14 @@ export default function Home() {
             <div
               className="w-full max-w-xl rounded-2xl p-10 text-center"
               style={{
-                background: "oklch(1 0 0)",
+                background: "var(--cream)",
                 border: "1px solid var(--border)",
-                boxShadow: "0 8px 40px oklch(0.20 0.02 55 / 0.10)"
+                boxShadow: "0 8px 40px oklch(0.22 0.02 60 / 0.10)"
               }}
             >
               <div className="text-5xl mb-4">🎉</div>
               <h3 className="text-2xl font-bold mb-2"
-                style={{ fontFamily: "'Cormorant Garamond', serif", color: "var(--foreground)", fontWeight: 700 }}>
+                style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
                 Category Complete!
               </h3>
               <p className="text-sm mb-6"
@@ -508,8 +467,8 @@ export default function Home() {
                     onClick={() => handleCategorySelect(categories[categories.indexOf(activeCategory) + 1])}
                     className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all active:scale-95"
                     style={{
-                      background: "oklch(0.60 0.14 65)",
-                      color: "white",
+                      background: "var(--terracotta)",
+                      color: "var(--primary-foreground)",
                       fontFamily: "'DM Sans', sans-serif"
                     }}
                   >
@@ -567,8 +526,8 @@ export default function Home() {
                 onClick={handleNext}
                 className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-sm font-medium transition-all active:scale-95"
                 style={{
-                  background: "oklch(0.60 0.14 65)",
-                  color: "white",
+                  background: "var(--terracotta)",
+                  color: "var(--primary-foreground)",
                   fontFamily: "'DM Sans', sans-serif"
                 }}
               >
@@ -582,25 +541,6 @@ export default function Home() {
             style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif", opacity: 0.6 }}>
             Use ← → arrow keys to navigate
           </p>
-
-          {/* Coffee nudge */}
-          <div className="mt-8 pt-6 border-t w-full max-w-xl text-center" style={{ borderColor: "var(--border)" }}>
-            <a
-              href="https://buy.stripe.com/5kQ3cv58l9Tpbh15zJ5ZC02"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-medium transition-all duration-150 hover:scale-105 active:scale-95"
-              style={{
-                background: "oklch(0.72 0.14 72 / 0.12)",
-                color: "oklch(0.45 0.10 65)",
-                fontFamily: "'DM Sans', sans-serif",
-                border: "1px solid oklch(0.72 0.14 72 / 0.3)",
-                textDecoration: "none",
-              }}
-            >
-              ☕ Enjoying Bangkok Speak? Buy me a coffee — $5
-            </a>
-          </div>
         </main>
       </div>
     </div>

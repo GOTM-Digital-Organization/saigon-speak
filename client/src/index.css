@@ -27,40 +27,40 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
   --font-mono: 'DM Mono', 'Courier New', monospace;
 }
 
 :root {
-  /* Bangkok Speak — Temple Gold & Teal palette */
-  --radius: 0.5rem;
-  --background: oklch(0.98 0.012 82);        /* warm ivory */
-  --foreground: oklch(0.20 0.02 55);         /* deep charcoal */
-  --card: oklch(1 0 0);                      /* white card */
-  --card-foreground: oklch(0.20 0.02 55);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.20 0.02 55);
-  --primary: oklch(0.60 0.14 65);            /* saffron gold */
-  --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.94 0.02 80);          /* warm sand */
-  --secondary-foreground: oklch(0.35 0.04 65);
-  --muted: oklch(0.94 0.015 80);
+  /* Saigon Speak — Warm Colonial Linen palette */
+  --radius: 0.75rem;
+  --background: oklch(0.97 0.018 80);       /* warm linen */
+  --foreground: oklch(0.22 0.02 60);         /* dark charcoal */
+  --card: oklch(0.99 0.012 75);              /* cream */
+  --card-foreground: oklch(0.22 0.02 60);
+  --popover: oklch(0.99 0.012 75);
+  --popover-foreground: oklch(0.22 0.02 60);
+  --primary: oklch(0.52 0.14 40);            /* terracotta */
+  --primary-foreground: oklch(0.98 0.01 75);
+  --secondary: oklch(0.93 0.025 78);         /* warm sand */
+  --secondary-foreground: oklch(0.35 0.04 60);
+  --muted: oklch(0.93 0.018 78);
   --muted-foreground: oklch(0.52 0.03 70);
-  --accent: oklch(0.86 0.07 195);            /* temple teal light */
-  --accent-foreground: oklch(0.28 0.09 195);
+  --accent: oklch(0.78 0.14 80);             /* saffron gold */
+  --accent-foreground: oklch(0.22 0.02 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.88 0.02 78);
-  --input: oklch(0.90 0.018 78);
-  --ring: oklch(0.60 0.14 65);
-  --thai-script: oklch(0.25 0.09 250);       /* deep indigo for Thai script */
-  --thai-script-light: oklch(0.50 0.08 250);
-  --gold: oklch(0.72 0.14 72);
-  --gold-dark: oklch(0.52 0.14 62);
-  --teal: oklch(0.50 0.11 195);
-  --teal-light: oklch(0.86 0.07 195);
-  --ivory: oklch(0.98 0.012 82);
+  --border: oklch(0.88 0.025 75);
+  --input: oklch(0.92 0.02 78);
+  --ring: oklch(0.52 0.14 40);
+  --vietnamese: oklch(0.35 0.12 265);        /* deep indigo for Vietnamese text */
+  --vietnamese-light: oklch(0.55 0.10 265);
+  --gold: oklch(0.78 0.14 80);
+  --terracotta: oklch(0.52 0.14 40);
+  --terracotta-light: oklch(0.72 0.10 40);
+  --linen: oklch(0.97 0.018 80);
+  --cream: oklch(0.99 0.012 75);
 }
 
 @layer base {
@@ -83,7 +83,7 @@
     @apply cursor-pointer;
   }
   h1, h2, h3 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: 'Playfair Display', Georgia, serif;
   }
 }
 
@@ -111,42 +111,6 @@
       padding-right: 2rem;
       max-width: 1280px;
     }
-  }
-
-  /* Thai script styling */
-  .thai-script {
-    font-family: 'Noto Sans Thai', 'Cormorant Garamond', serif;
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--thai-script);
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-  }
-  .thai-script-sm {
-    font-family: 'Noto Sans Thai', 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: var(--thai-script);
-    line-height: 1.5;
-  }
-  /* Pronunciation badge — teal */
-  .pronunciation-badge {
-    font-family: 'DM Mono', monospace;
-    background: oklch(0.86 0.07 195 / 0.3);
-    color: oklch(0.28 0.09 195);
-    border: 1px solid oklch(0.50 0.11 195 / 0.35);
-    padding: 0.2rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.88rem;
-    letter-spacing: 0.03em;
-    display: inline-block;
-  }
-  /* Gold accent rule */
-  .gold-rule {
-    height: 2px;
-    background: linear-gradient(90deg, oklch(0.72 0.14 72), oklch(0.60 0.14 65 / 0.15));
-    border: none;
-    margin: 1rem 0;
   }
 
   /* Flashcard 3D flip */

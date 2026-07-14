@@ -2,10 +2,9 @@ import rawData from "@/data/flashcards.json";
 
 export interface Flashcard {
   english: string;
-  thai_script: string;
+  vietnamese: string;
   pronunciation: string;
   example_sentence: string;
-  example_phonetic: string;
   example_translation: string;
   notes: string;
   category: string;
@@ -27,19 +26,19 @@ export const categoryIcons: Record<string, string> = {
   "Politeness": "🙏",
   "Numbers": "🔢",
   "Time & Dates": "🕐",
-  "Money & Bargaining": "💵",
+  "Money": "💵",
   "Restaurants": "🍜",
-  "Street Food & Night Markets": "🌙",
-  "Coffee Shops & Cafés": "☕",
+  "Coffee Shops": "☕",
   "Shopping": "🛍️",
-  "Tuk-tuks, Taxis & Transport": "🛺",
+  "Grab & Transportation": "🛵",
   "Renting Apartments": "🏠",
   "Directions": "🗺️",
   "Emergencies": "🚨",
   "Dating & Friends": "❤️",
   "Daily Conversation": "💬",
-  "Slang & Colloquial Bangkok Thai": "😄",
-  "Temples, Monks & Culture": "🛕",
+  "Slang & Colloquial Southern Vietnamese": "😄",
+  "Food": "🥢",
+  "Motorbike & Traffic": "🏍️",
   "Healthcare": "🏥",
   "Bureaucracy & Visas": "📋",
 };
