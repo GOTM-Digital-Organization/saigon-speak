@@ -319,11 +319,31 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="border-t py-6 text-center"
-          style={{ borderColor: "var(--border)", background: "oklch(1 0 0)" }}>
-          <p className="text-sm" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
-            Bangkok Speak — Everyday Bangkok Thai for real life in Thailand
-          </p>
+        <footer className="border-t py-10 text-center"
+          style={{ borderColor: "var(--border)", background: "oklch(0.99 0.002 65)" }}>
+          <div className="max-w-lg mx-auto px-6 flex flex-col items-center gap-4">
+            <p className="text-base" style={{ color: "var(--foreground)", fontFamily: "'DM Sans', sans-serif", fontWeight: 500 }}>
+              Bangkok Speak is free. If it helped you speak like a local, not a tourist — buy me a coffee. Every one keeps the app going. ☕
+            </p>
+            <a
+              href="https://buy.stripe.com/5kQ3cv58l9Tpbh15zJ5ZC02"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm transition-all duration-150 hover:scale-105 active:scale-95"
+              style={{
+                background: "linear-gradient(135deg, oklch(0.72 0.14 72), oklch(0.60 0.14 65))",
+                color: "oklch(1 0 0)",
+                fontFamily: "'DM Sans', sans-serif",
+                boxShadow: "0 4px 14px oklch(0.60 0.14 65 / 0.35)",
+                textDecoration: "none",
+              }}
+            >
+              ☕ Buy me a coffee — $5
+            </a>
+            <p className="text-xs" style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
+              Bangkok Speak — Everyday Bangkok Thai for real life in Thailand
+            </p>
+          </div>
         </footer>
       </div>
     );
@@ -562,6 +582,25 @@ export default function Home() {
             style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif", opacity: 0.6 }}>
             Use ← → arrow keys to navigate
           </p>
+
+          {/* Coffee nudge */}
+          <div className="mt-8 pt-6 border-t w-full max-w-xl text-center" style={{ borderColor: "var(--border)" }}>
+            <a
+              href="https://buy.stripe.com/5kQ3cv58l9Tpbh15zJ5ZC02"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-medium transition-all duration-150 hover:scale-105 active:scale-95"
+              style={{
+                background: "oklch(0.72 0.14 72 / 0.12)",
+                color: "oklch(0.45 0.10 65)",
+                fontFamily: "'DM Sans', sans-serif",
+                border: "1px solid oklch(0.72 0.14 72 / 0.3)",
+                textDecoration: "none",
+              }}
+            >
+              ☕ Enjoying Bangkok Speak? Buy me a coffee — $5
+            </a>
+          </div>
         </main>
       </div>
     </div>
