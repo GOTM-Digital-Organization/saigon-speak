@@ -159,13 +159,13 @@ export default function FlashCard({ card, cardNumber, totalCards }: FlashCardPro
             <div
               className="text-base mb-1"
               style={{
-                fontFamily: "'Noto Sans Thai', 'Cormorant Garamond', serif",
+                fontFamily: "'DM Mono', monospace",
                 color: "oklch(0.38 0.07 250)",
                 lineHeight: 1.6,
-                fontSize: "1rem",
+                fontSize: "0.95rem",
               }}
             >
-              {card.example_sentence}
+              {card.example_phonetic || card.example_sentence}
             </div>
             <div
               className="text-sm mb-3 italic"

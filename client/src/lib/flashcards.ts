@@ -5,6 +5,7 @@ export interface Flashcard {
   thai_script: string;
   pronunciation: string;
   example_sentence: string;
+  example_phonetic: string;
   example_translation: string;
   notes: string;
   category: string;

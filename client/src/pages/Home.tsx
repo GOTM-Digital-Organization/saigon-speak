@@ -190,7 +190,7 @@ export default function Home() {
                   {[
                     ["Thai Script", "หวัดดี — so you recognize it written"],
                     ["Pronunciation", "wàt-dee — how you actually say it"],
-                    ["Example", "หวัดดีจ้า → Hey! (casual greeting)"],
+                    ["Example", "wàt-dee jâa → Hey! (casual greeting)"],
                     ["Notes", "Casual — use with friends, not elders"],
                   ].map(([label, desc]) => (
                     <div key={label} className="flex items-start gap-2">
@@ -242,8 +242,8 @@ export default function Home() {
                     <div className="text-xs uppercase tracking-wide mb-0.5"
                       style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>Example</div>
                     <div className="text-sm"
-                      style={{ fontFamily: "'Noto Sans Thai', serif", color: "oklch(0.38 0.07 250)", lineHeight: 1.6 }}>
-                      หวัดดีจ้า เจอกันที่ร้านนะ
+                      style={{ fontFamily: "'DM Mono', monospace", color: "oklch(0.38 0.07 250)", lineHeight: 1.6 }}>
+                      wàt-dee jâa · jer-gan têe ráan ná
                     </div>
                     <div className="text-xs mt-0.5 italic"
                       style={{ color: "var(--muted-foreground)", fontFamily: "'DM Sans', sans-serif" }}>
@@ -257,7 +257,7 @@ export default function Home() {
                       borderLeft: "3px solid oklch(0.72 0.14 72)",
                       fontFamily: "'DM Sans', sans-serif"
                     }}>
-                    Very casual — use with friends. Add จ้า for warmth. Avoid with elders (use สวัสดีครับ/ค่ะ).
+                    Very casual — use with friends. Add jâa for warmth. Avoid with elders (use sà-wàt-dee krap/kâ).
                   </div>
                 </div>
               </div>
