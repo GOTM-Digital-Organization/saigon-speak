@@ -8,7 +8,7 @@
 
 import { useState } from "react";
 import { type Flashcard } from "@/lib/flashcards";
-import { RotateCcw } from "lucide-react";
+import { RotateCcw, Volume2 } from "lucide-react";
 
 interface FlashCardProps {
   card: Flashcard;
@@ -18,8 +18,19 @@ interface FlashCardProps {
 
 export default function FlashCard({ card, cardNumber, totalCards }: FlashCardProps) {
   const [flipped, setFlipped] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleFlip = () => setFlipped((f) => !f);
+
+  const handlePlayAudio = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Don't flip the card when tapping audio button
+    if (!card.audio_url || isPlaying) return;
+    const audio = new Audio(card.audio_url);
+    setIsPlaying(true);
+    audio.play().catch(() => setIsPlaying(false));
+    audio.onended = () => setIsPlaying(false);
+    audio.onerror = () => setIsPlaying(false);
+  };
 
   return (
     <div className="w-full flex flex-col items-center gap-4">
@@ -80,7 +91,8 @@ export default function FlashCard({ card, cardNumber, totalCards }: FlashCardPro
             </div>
 
             {/* Pronunciation */}
-            <div className="text-base mb-4 px-3 py-1.5 rounded-lg inline-block self-start"
+            <div className="flex items-center gap-2 mb-4">
+            <div className="text-base px-3 py-1.5 rounded-lg inline-block"
               style={{
                 fontFamily: "'DM Mono', monospace",
                 color: "var(--terracotta)",
@@ -88,6 +100,23 @@ export default function FlashCard({ card, cardNumber, totalCards }: FlashCardPro
                 fontSize: "0.9rem"
               }}>
               /{card.pronunciation}/
+            </div>
+            {card.audio_url && (
+              <button
+                onClick={handlePlayAudio}
+                title="Play pronunciation"
+                className="flex items-center justify-center w-8 h-8 rounded-full transition-all active:scale-90"
+                style={{
+                  background: isPlaying ? "var(--terracotta)" : "oklch(0.52 0.14 40 / 0.10)",
+                  color: isPlaying ? "white" : "var(--terracotta)",
+                  border: "none",
+                  cursor: "pointer",
+                  flexShrink: 0
+                }}
+              >
+                <Volume2 size={15} />
+              </button>
+            )}
             </div>
 
             {/* Divider */}

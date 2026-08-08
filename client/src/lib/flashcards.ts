@@ -8,6 +8,7 @@ export interface Flashcard {
   example_translation: string;
   notes: string;
   category: string;
+  audio_url?: string | null;
 }
 
 export const allCards: Flashcard[] = rawData as Flashcard[];
