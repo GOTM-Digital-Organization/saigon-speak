@@ -86,7 +86,7 @@ export default function Home() {
           style={{ background: "var(--cream)", borderColor: "var(--border)" }}
         >
           <div className="flex items-center gap-3">
-            <img src="/manus-storage/saigon-logo_49b4357c.png" alt="Saigon Speak" className="w-9 h-9 object-contain" />
+            <img src="/images/logo.webp" alt="Saigon Speak" className="w-9 h-9 object-contain" />
             <div>
               <h1 className="text-xl font-bold leading-none"
                 style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
@@ -105,7 +105,7 @@ export default function Home() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: "url('/manus-storage/saigon-hero_7e351c38.jpg')",
+              backgroundImage: "url('/images/hero.webp')",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -355,7 +355,7 @@ export default function Home() {
             onClick={() => setView("landing")}
             className="flex items-center gap-2 transition-opacity hover:opacity-70"
           >
-            <img src="/manus-storage/saigon-logo_49b4357c.png" alt="Saigon Speak" className="w-8 h-8 object-contain" />
+            <img src="/images/logo.webp" alt="Saigon Speak" className="w-8 h-8 object-contain" />
             <span className="text-lg font-bold hidden sm:block"
               style={{ fontFamily: "'Playfair Display', serif", color: "var(--foreground)" }}>
               Saigon Speak
